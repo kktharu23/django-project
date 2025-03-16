@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>My Html page</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/c2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/c3.css' %}">
+     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    <header>
+        
+        <nav>
+            <a href="{% url 'dhoni_view1' %}">Dhoni View1</a>
+              <a href="{% url 'dhoni_view2' %}">Dhoni View2</a>
+                <a href="{% url 'viratkohli_view1' %}">Viratkohli View1</a>
+                  <a href="{% url 'viratkohli_view2' %}">Viratkohli View2</a>
+        </nav>
+       
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+   <center>
+    <footer>
+        <p>&copy; 2025 My Login page | All Rights Reserved</p>
+    </footer>
+    </center>
+</body>
+</html> 
+
+
+
